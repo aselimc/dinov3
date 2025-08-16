@@ -25,7 +25,7 @@ Reference PyTorch implementation and models for DINOv3. For details, see the **[
 
 <br/>
 
-An extended family of versatile vision foundation models producing high-quality dense features and achieving outstanding performance on various vision tasks including outperforming the specialized state of the art across a broad range of settings, without fine-tuning
+An extended family of versatile vision foundation models that produce high-quality dense features and achieve outstanding performance on various vision tasks, including outperforming the specialized state-of-the-art across a broad range of settings, without fine-tuning.
 
 ## Pretrained models
 
@@ -240,7 +240,7 @@ where `model` and `pretrained_model_name` above can be one of:
 For models using the LVD-1689M weights (pretrained on web images), please use the following transform (standard ImageNet evaluation transform):
 
 ```python
-import torchvision
+from torchvision import transforms
 
 def make_transform(resize_size: int = 224):
     to_tensor = transforms.ToTensor()
@@ -257,7 +257,7 @@ For models using the SAT-493M weights (pretrained on satellite imagery), please 
 
 
 ```python
-import torchvision
+from torchvision import transforms
 
 def make_transform(resize_size: int = 224):
     to_tensor = transforms.ToTensor()
@@ -456,7 +456,7 @@ def make_transform(resize_size: int | list[int] = 768):
 segmentor = torch.hub.load(REPO_DIR, 'dinov3_vit7b16_ms', source="local", weights=<SEGMENTOR/CHECKPOINT/URL/OR/PATH>, backbone_weights=<BACKBONE/CHECKPOINT/URL/OR/PATH>)
 
 img_size = 896
-img  = get_img()
+img = get_img()
 transform = make_transform(img_size)
 with torch.inference_mode():
     with torch.autocast('cuda', dtype=torch.bfloat16):
