@@ -25,7 +25,7 @@ Reference PyTorch implementation and models for DINOv3. For details, see the **[
 
 <br/>
 
-An extended family of versatile vision foundation models that produce high-quality dense features and achieve outstanding performance on various vision tasks, including outperforming the specialized state-of-the-art across a broad range of settings, without fine-tuning.
+An extended family of versatile vision foundation models producing high-quality dense features and achieving outstanding performance on various vision tasks including outperforming the specialized state of the art across a broad range of settings, without fine-tuning
 
 ## Pretrained models
 
