@@ -242,7 +242,7 @@ For models using the LVD-1689M weights (pretrained on web images), please use th
 ```python
 from torchvision import transforms
 
-def make_transform(resize_size: int = 224):
+def make_transform(resize_size: int = 256):
     to_tensor = transforms.ToTensor()
     resize = transforms.Resize((resize_size, resize_size), antialias=True)
     normalize = transforms.Normalize(
@@ -259,7 +259,7 @@ For models using the SAT-493M weights (pretrained on satellite imagery), please 
 ```python
 from torchvision import transforms
 
-def make_transform(resize_size: int = 224):
+def make_transform(resize_size: int = 256):
     to_tensor = transforms.ToTensor()
     resize = transforms.Resize((resize_size, resize_size), antialias=True)
     normalize = transforms.Normalize(
